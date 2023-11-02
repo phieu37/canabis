@@ -1,0 +1,104 @@
+:root {
+    --black-color: #000;
+    /* --black-color: #ccc; */
+    --red-color: #D3122A;
+    --primary-color: #48653D;
+    --border-color: #e1e1e1;
+    --text-color: #DEEFD6;
+    /* --text-color: #000; */
+
+    --header-middle: 15.5rem;
+    --header-middle-mobile: 8.5rem;
+    --navbar-height: 34px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;
+
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* hack 16px = 1rem */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Rubik', sans-serif;
+    box-sizing: border-box;
+    background-color: #000;
+    /* background: #ccc; */
+    font-weight: 400;
+}
+
+/* h5 để test liên kết */
+h5 {
+    color: red;
+    font-size: 3rem;
+}
+
+ul {
+	list-style: none;
+    padding-left: 0;
+}
+
+/* a>img -> block -> img nằm gọn trong a */
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* Animate */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translate3d(0,-100%,0);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes scroll {
+    0%   {
+        opacity: 0;
+        line-height: 12rem;
+    }
+    25%  {
+        opacity: 0.2;
+        line-height: 11rem;
+    }
+    50%  {
+        opacity: 0.6;
+        line-height: 10rem;
+        font-size: 2rem;
+    }
+    75%  {
+        opacity: 0.5;
+        line-height: 8rem;
+    }
+    100% {
+        opacity: 1;
+        line-height: 6rem;
+    }
+}
+
+.animate__animated.animate__fadeInRight {
+    --animate-duration: 0.5s;
+}
